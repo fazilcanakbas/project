@@ -68,9 +68,9 @@ const MouseIcon = () => (
 const Home = () => {
   return (
     <div className="font-poppins">
-      {/* Hero Section with Modern Design */}
+      {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
-        {/* Video Background with Enhanced Overlay */}
+        {/* Video Background with Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent z-10"></div>
         <video
           autoPlay
@@ -80,10 +80,8 @@ const Home = () => {
         >
           <source src={havacilar} type="video/mp4" />
         </video>
-        
         <div className="container mx-auto px-4 z-20 relative">
           <div className="flex items-center justify-center min-h-[80vh]">
-            {/* Centered Content */}
             <div className="text-center text-white space-y-10 max-w-5xl mx-auto w-full">
               {/* Badge */}
               <motion.div
@@ -95,7 +93,6 @@ const Home = () => {
                 <Award className="w-6 h-6 mr-3 text-yellow-400" />
                 <span className="text-lg font-medium">15+ Yıllık Güvenilir Deneyim</span>
               </motion.div>
-
               {/* Main Heading */}
               <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
@@ -103,11 +100,10 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.6 }}
               >
-                <span className="block text-white mb-4" style={{ fontFamily:'Poppins ,sans-serif' }}>Yatırımın Geleceği</span>
+                <span className="block text-white mb-4" style={{ fontFamily: 'Poppins,sans-serif' }}>Yatırımın Geleceği</span>
                 <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent mb-4"></span>
-                <span className="block text-white" style={{ fontFamily:'Poppins , sans-serif' }} >Burada Başlıyor</span>
+                <span className="block text-white" style={{ fontFamily: 'Poppins,sans-serif' }}>Burada Başlıyor</span>
               </motion.h1>
-
               {/* Description */}
               <motion.p
                 className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto"
@@ -119,7 +115,6 @@ const Home = () => {
                 <span className="text-cyan-300 font-semibold"> güvenilir yatırım </span>
                 fırsatları sunuyoruz.
               </motion.p>
-
               {/* Butonlar ve Mouse Ikonu */}
               <motion.div
                 className="flex flex-col items-center gap-4 w-full"
@@ -141,7 +136,6 @@ const Home = () => {
                     Tanıtım Videosu
                   </button>
                 </div>
-                {/* Mouse Icon tam ortada, tam iki butonun arasında, üstüne binmez */}
                 <MouseIcon />
               </motion.div>
             </div>
@@ -159,26 +153,31 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
-              Güvenilir Yatırım Ortağınız
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              <span className="inline-flex items-center gap-2 text-blue-600">
+                <Users className="w-8 h-8 text-blue-500" />
+                Güvenilir Yatırım Ortağınız
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Havacılar olarak, gayrimenkul ve havacılık sektörlerinde uzun yıllara dayanan deneyimimizle,
-              müşterilerimize en kaliteli yatırım fırsatlarını sunuyoruz. Profesyonel ekibimiz ve güçlü 
-              partnerliklerimiyle, geleceğin projelerini bugünden hayata geçiriyoruz.
+            <p className="text-xl text-gray-700 leading-relaxed mb-10 font-medium">
+              Havacılar olarak, gayrimenkul ve havacılık sektörlerinde uzun yıllara dayanan deneyimimizle müşterilerimize en kaliteli yatırım fırsatlarını sunuyoruz. 
+              <span className="block mt-4 text-blue-600 font-semibold">Geleceğin projelerini bugünden hayata geçiriyoruz.</span>
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                <div className="text-gray-600">Yıllık Deneyim</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+              <div className="bg-white rounded-xl shadow-lg py-8 px-4 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+                <Award className="w-10 h-10 text-yellow-400 mb-3" />
+                <div className="text-3xl font-extrabold text-blue-600 mb-2">15+</div>
+                <div className="text-gray-600 font-semibold">Yıllık Deneyim</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                <div className="text-gray-600">Başarılı Proje</div>
+              <div className="bg-white rounded-xl shadow-lg py-8 px-4 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+                <Building2 className="w-10 h-10 text-blue-500 mb-3" />
+                <div className="text-3xl font-extrabold text-blue-600 mb-2">50+</div>
+                <div className="text-gray-600 font-semibold">Başarılı Proje</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
-                <div className="text-gray-600">Mutlu Müşteri</div>
+              <div className="bg-white rounded-xl shadow-lg py-8 px-4 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+                <Users className="w-10 h-10 text-cyan-500 mb-3" />
+                <div className="text-3xl font-extrabold text-blue-600 mb-2">1000+</div>
+                <div className="text-gray-600 font-semibold">Mutlu Müşteri</div>
               </div>
             </div>
           </motion.div>
@@ -186,135 +185,136 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Öne Çıkan Projelerimiz
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+              <span className="inline-flex items-center gap-2 text-blue-600">
+                <Building2 className="w-8 h-8 text-blue-500" />
+                Öne Çıkan Projelerimiz
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Gayrimenkul ve havacılık alanlarında hayata geçirdiğimiz projelerimizle
-              fark yaratıyoruz.
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto font-medium">
+              Gayrimenkul ve havacılık alanlarında hayata geçirdiğimiz projelerimizle fark yaratıyoruz.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.7, delay: index * 0.12 }}
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-56 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="p-7 flex flex-col gap-2 flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-md font-bold">
                       {project.type}
                     </span>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <MapPin className="w-4 h-4 mr-1" />
+                    <div className="flex items-center text-gray-500 text-md font-semibold">
+                      <MapPin className="w-5 h-5 mr-2" />
                       {project.location}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-extrabold text-gray-800 mb-1">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-700 text-md leading-relaxed font-medium mb-3">
                     {project.description}
                   </p>
                 </div>
               </motion.div>
             ))}
           </div>
-
           <motion.div
-            className="text-center mt-12"
+            className="text-center mt-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
             <Link
               to="/projeler/gayrimenkul"
-              className="inline-flex items-center bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+              className="inline-flex items-center bg-blue-600 text-white hover:bg-blue-800 px-10 py-4 rounded-xl font-extrabold text-lg shadow-lg transition-all duration-300"
             >
               Tüm Projeleri Görüntüle
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-6 h-6" />
             </Link>
           </motion.div>
         </div>
       </section>
 
       {/* Recent News */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Son Duyurular
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+              <span className="inline-flex items-center gap-2 text-blue-600">
+                <Calendar className="w-8 h-8 text-blue-500" />
+                Son Duyurular
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto font-medium">
               Projelerimiz ve şirketimizle ilgili en güncel gelişmeleri takip edin.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {recentNews.map((news, index) => (
               <motion.article
                 key={news.id}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-blue-100"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.7, delay: index * 0.11 }}
               >
-                <div className="flex items-center text-gray-500 text-sm mb-3">
-                  <Calendar className="w-4 h-4 mr-2" />
+                <div className="flex items-center text-blue-700 text-md mb-2 font-semibold">
+                  <Calendar className="w-5 h-5 mr-2" />
                   {new Date(news.date).toLocaleDateString('tr-TR')}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-2">
                   {news.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed font-medium">
                   {news.excerpt}
                 </p>
               </motion.article>
             ))}
           </div>
-
           <motion.div
-            className="text-center mt-12"
+            className="text-center mt-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
             <Link
               to="/duyurular"
-              className="inline-flex items-center bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+              className="inline-flex items-center bg-blue-600 text-white hover:bg-blue-800 px-10 py-4 rounded-xl font-extrabold text-lg shadow-lg transition-all duration-300"
             >
               Tüm Duyuruları Görüntüle
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-6 h-6" />
             </Link>
           </motion.div>
         </div>
